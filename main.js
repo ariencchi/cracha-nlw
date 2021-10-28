@@ -18,6 +18,7 @@ function getGitHubProfileInfos() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      nameTitle.textContent = data.name + ' - DoWhile'
       userName.textContent = data.name
       userBio.textContent = data.bio
       userLink.href = data.html_url
